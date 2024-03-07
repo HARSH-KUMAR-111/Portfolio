@@ -19,11 +19,7 @@ html {
   font-size: 62.5%; 
   overflow-x: hidden; 
 }
-body { 
-  background : var(--bg-color); 
-  font-family: "Poppins",sans-serif; 
-  color: var(--text-color);
-}
+
 html::-webkit-scrollbar{
   width: 0.8rem;
 }
@@ -193,16 +189,17 @@ section{
   color: var(--text-color);
   box-shadow: 0 0 25px var(--main-color);
 }
+
 body{
   margin: 0;
   padding: 0;
   background-color: #2f3542;
   color: #fff;
   height: 100vh;
-  display: flex;
+  /* display: block; */
   align-items: center;
   justify-content: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", "Montserrat", sans-serif; 
 }
 
 .animated-text{
@@ -263,4 +260,72 @@ body{
   5%,20%,25%,40%,45%,60%,65%,80%,85%{
       width: calc(100% + 8px);
   }
+}
+
+@media (max-width:1000px){
+  .home{
+    gap: 4rem;
+  }
+}
+@media (max-width: 995px){
+  .home{
+    flex-direction: column;
+    margin: 5rem 4rem;
+  }
+  .home .home-content h3{
+    font-size: 2.5rem;
+  }
+  .home-content h1{
+    font-size: 5rem;
+  }
+  .home-img img{
+    width: 70vw;
+    margin-top: 4rem;
+  }
+
+}
+
+/* services section */
+
+.services h2 {
+  margin-bottom: 5rem;
+}
+
+.services-container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.services-container .services-box {
+  flex: 1 1 30rem;
+  background: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem solid var(--second-bg-color);
+  transition: 0.5s ease;
+}
+
+.services-container .services-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+.services-box i {
+  font-size: 4rem;
+  color: var(--main-color);
+}
+
+.services-box h3 {
+  font-size: 2.6rem;
+}
+
+.services-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
 }
